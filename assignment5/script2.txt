@@ -1,0 +1,21 @@
+Script started on 2022-04-01 15:38:04-06:00
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ ./a5b
+usage: a5b mm dd
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ ./a5b -1 -1
+usage: a5b mm dd
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ ./a5b 31 41[K[K[K[K[K31 41
+usage: a5b mm dd
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ ./a5b 11 25[K[K[K[K[K11 25
+November 25th is Autumn
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ ./a5b 1 1[K[K[K[K[K1 1
+January 1st is Winter
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ ./a5b 7 16[K[K[K7 16
+July 16th is Summer
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ ./a5b 5 23[K[K[K[K5 20[K3
+May 23rd is Spring
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ ./a5b 5 23 23
+usage: a5b mm dd
+]0;jaza.khan@csa1:~jaza.khan@csa1:~$ exit
+exit
+
+Script done on 2022-04-01 15:39:28-06:00
