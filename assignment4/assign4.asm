@@ -2,7 +2,7 @@
 // CPSC 355 W22 Assignment 4
 
 // Assembly program that implements the given C program. Implements all subroutines as closed subroutines, 
-// using stack variables to store all local variables.
+// using stack variables to store all local variables. Does not work lol
 
 // ------------------------------------------------------------------------------------------------------------ //
 
