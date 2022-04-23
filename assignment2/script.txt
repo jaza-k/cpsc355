@@ -1,0 +1,178 @@
+Script started on 2022-02-11 17:24:42-07:00
+]0;jaza.khan@csa3:~jaza.khan@csa3:~$ gdb ./assifn[K[Kgn2a
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./assign2a...(no debugging symbols found)...done.
+(gdb) display/i $pc
+1: x/i $pc
+<error: No registers.>
+(gdb) b loopcheck[K[K[K[K[KCheck
+Breakpoint 1 at 0x400694
+(gdb) stat[Krt
+Temporary breakpoint 2 at 0x400620
+Starting program: /home/uga/jaza.khan/assign2a 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Temporary breakpoint 2, 0x0000000000400620 in main ()
+1: x/i $pc
+=> 0x400620 <main+12>:	mov	w20, #0xfefefefe            	// #-16843010
+(gdb) ni
+0x0000000000400624 in main ()
+1: x/i $pc
+=> 0x400624 <main+16>:	mov	w21, #0x0                   	// #0
+(gdb) ni
+0x0000000000400628 in main ()
+1: x/i $pc
+=> 0x400628 <main+20>:	mov	w22, #0x0                   	// #0
+(gdb) ni
+0x000000000040062c in main ()
+1: x/i $pc
+=> 0x40062c <main+24>:	adrp	x0, 0x400000
+(gdb) ni
+0x0000000000400630 in main ()
+1: x/i $pc
+=> 0x400630 <main+28>:	add	x0, x0, #0x594
+(gdb) ni
+0x0000000000400634 in main ()
+1: x/i $pc
+=> 0x400634 <main+32>:	mov	w1, w19
+(gdb) ni
+0x0000000000400638 in main ()
+1: x/i $pc
+=> 0x400638 <main+36>:	mov	w2, w19
+(gdb) ni
+0x000000000040063c in main ()
+1: x/i $pc
+=> 0x40063c <main+40>:	mov	w3, w20
+(gdb) ni
+0x0000000000400640 in main ()
+1: x/i $pc
+=> 0x400640 <main+44>:	mov	w4, w20
+(gdb) ni
+0x0000000000400644 in main ()
+1: x/i $pc
+=> 0x400644 <main+48>:	bl	0x400480 <printf@plt>
+(gdb) ni
+multiplier = 0x00000046 (70)  multiplicand = 0xfefefefe (-16843010)
+
+0x0000000000400648 in main ()
+1: x/i $pc
+=> 0x400648 <main+52>:	cmp	w19, #0x0
+(gdb) ni
+0x000000000040064c in main ()
+1: x/i $pc
+=> 0x40064c <main+56>:	b.lt	0x400658 <setFalse>  // b.tstop
+(gdb) ni
+0x0000000000400650 in main ()
+1: x/i $pc
+=> 0x400650 <main+60>:	b	0x40065c <setTrue>
+(gdb) nio[K
+
+Breakpoint 1, 0x0000000000400694 in loopCheck ()
+1: x/i $pc
+=> 0x400694 <loopCheck>:	cmp	w22, #0x20
+(gdb) ni
+0x0000000000400698 in loopCheck ()
+1: x/i $pc
+=> 0x400698 <loopCheck+4>:	b.lt	0x400668 <loopStart>  // b.tstop
+(gdb) ni
+0x0000000000400668 in loopStart ()
+1: x/i $pc
+=> 0x400668 <loopStart>:	tst	w19, #0x1
+(gdb) ni
+0x000000000040066c in loopStart ()
+1: x/i $pc
+=> 0x40066c <loopStart+4>:	b.eq	0x400674 <then>  // b.none
+(gdb) ni
+0x0000000000400674 in then ()
+1: x/i $pc
+=> 0x400674 <then>:	asr	w19, w19, #1
+(gdb) ni
+0x0000000000400678 in then ()
+1: x/i $pc
+=> 0x400678 <then+4>:	tst	w21, #0x1
+(gdb) ni
+0x000000000040067c in then ()
+1: x/i $pc
+=> 0x40067c <then+8>:	b.eq	0x400688 <then1>  // b.none
+(gdb) ni
+0x0000000000400688 in then1 ()
+1: x/i $pc
+=> 0x400688 <then1>:	and	w19, w19, #0x7fffffff
+(gdb) ni
+0x000000000040068c in close ()
+1: x/i $pc
+=> 0x40068c <close>:	asr	w21, w21, #1
+(gdb) ni
+0x0000000000400690 in close ()
+1: x/i $pc
+=> 0x400690 <close+4>:	add	w22, w22, #0x1
+(gdb) ni
+
+Breakpoint 1, 0x0000000000400694 in loopCheck ()
+1: x/i $pc
+=> 0x400694 <loopCheck>:	cmp	w22, #0x20
+(gdb) ni
+0x0000000000400698 in loopCheck ()
+1: x/i $pc
+=> 0x400698 <loopCheck+4>:	b.lt	0x400668 <loopStart>  // b.tstop
+(gdb) ni
+0x0000000000400668 in loopStart ()
+1: x/i $pc
+=> 0x400668 <loopStart>:	tst	w19, #0x1
+(gdb) ni
+0x000000000040066c in loopStart ()
+1: x/i $pc
+=> 0x40066c <loopStart+4>:	b.eq	0x400674 <then>  // b.none
+(gdb) ni
+0x0000000000400670 in loopStart ()
+1: x/i $pc
+=> 0x400670 <loopStart+8>:	add	w21, w21, w20
+(gdb) ni
+0x0000000000400674 in then ()
+1: x/i $pc
+=> 0x400674 <then>:	asr	w19, w19, #1
+(gdb) p $x19[K[K23
+$1 = 1
+(gdb) p $x21
+$2 = 4278124286
+(gdb) ni
+0x0000000000400678 in then ()
+1: x/i $pc
+=> 0x400678 <then+4>:	tst	w21, #0x1
+(gdb) ni
+0x000000000040067c in then ()
+1: x/i $pc
+=> 0x40067c <then+8>:	b.eq	0x400688 <then1>  // b.none
+(gdb) ni
+0x0000000000400688 in then1 ()
+1: x/i $pc
+=> 0x400688 <then1>:	and	w19, w19, #0x7fffffff
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 14344] will be killed.
+
+Quit anyway? (y or n) y
+]0;jaza.khan@csa3:~jaza.khan@csa3:~$ exit
+exit
+
+Script done on 2022-02-11 17:26:40-07:00
