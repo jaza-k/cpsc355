@@ -1,0 +1,237 @@
+Script started on 2022-03-04 15:43:01-07:00
+]0;jaza.khan@csa3:~jaza.khan@csa3:~$ gdb ./assign3
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./assign3...(no debugging symbols found)...done.
+(gdb) display/i $pxc[K[Kc
+1: x/i $pc
+<error: No registers.>
+(gdb) b main
+Breakpoint 1 at 0x400624
+(gdb) b printUnsorted A[K[KArray
+Breakpoint 2 at 0x400684
+(gdb) b printSortedArray
+Breakpoint 3 at 0x400758
+(gdb) start
+Temporary breakpoint 4 at 0x400624
+Starting program: /home/uga/jaza.khan/assign3 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, 0x0000000000400624 in main ()
+1: x/i $pc
+=> 0x400624 <main+12>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+
+Unsorted array:    
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[0] = 103
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[1] = 198
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[2] = 105
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[3] = 115
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[4] = 81
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[5] = 255
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[6] = 74
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[7] = 236
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) /x[K[Kx/100ud $x29
+0xffffffffefb0:	-3872	65535	-1084900956	65535
+0xffffffffefc0:	8	0	0	103
+0xffffffffefd0:	198	105	115	81
+0xffffffffefe0:	255	74	236	41
+0xffffffffeff0:	205	186	171	242
+0xfffffffff000:	251	227	70	124
+0xfffffffff010:	194	84	248	27
+0xfffffffff020:	232	231	141	118
+0xfffffffff030:	90	46	99	51
+0xfffffffff040:	159	201	154	102
+0xfffffffff050:	50	13	183	49
+0xfffffffff060:	88	163	90	37
+0xfffffffff070:	93	5	23	88
+0xfffffffff080:	233	94	212	171
+0xfffffffff090:	178	65535	4196300	0
+0xfffffffff0a0:	-3872	65535	-1084901044	65535
+0xfffffffff0b0:	4196240	0	0	0
+0xfffffffff0c0:	-3872	65535	-1084901016	65535
+0xfffffffff0d0:	4196240	0	0	0
+0xfffffffff0e0:	0	0	4195628	0
+0xfffffffff0f0:	0	0	0	0
+0xfffffffff100:	4195552	0	0	0
+0xfffffffff110:	0	0	0	0
+0xfffffffff120:	4195552	0	-3544	65535
+0xfffffffff130:	-3696	1	4195864	0
+(gdb) x/100ud $x29[K[K30
+0x4006a0 <printUnsortedArray+28>:	285214356	-1191177292	1895877279	1426063051
+0x4006b0 <printUnsortedCheck+8>:	-1186982988	1384120372	-1191177292	335544350
+0x4006c0 <firstLoop>:	-1186982988	-1200301448	-1191175240	-1186982988
+0x4006d0 <firstLoop+16>:	-1191176268	335544329	-1186981963	1358956215
+0x4006e0 <secondLoop+8>:	-1200104838	285214455	-1204299142	-1186981963
+0x4006f0 <secondLoop+24>:	1358956213	-1191176267	-1186981963	1895826111
+0x400700 <checkSecondLoop+8>:	1409286381	1358956215	-1200104838	-1186980938
+0x400710 <checkSecondLoop+24>:	1796866783	1409286218	402653168	-1186981963
+0x400720 <done+4>:	-1186980938	-1204430218	-1186982988	285214356
+0x400730 <done+20>:	-1191177292	-1186982988	1895877279	1426062379
+0x400740 <checkFirstLoop+12>:	-1879048192	-1860704256	-1744830622	1384120340
+0x400750 <checkFirstLoop+28>:	-1191177292	335544330	-1186982988	-1200301447
+0x400760 <printSortedArray+8>:	-1879048192	-1860685824	705954785	706282466
+0x400770 <printSortedArray+24>:	-1744830632	285214356	-1191177292	1895877279
+0x400780 <printSortedCheck+4>:	1426063051	-763363328	-1462535171	-698416192
+0x400790 <__libc_csu_init>:	-1447265283	-1862269955	-1459530765	-268435212
+0x4007a0 <__libc_csu_init+16>:	-1858600300	-1459463179	-268435211	-1858608459
+0x4007b0 <__libc_csu_init+32>:	-887815532	704644086	-1459395593	-1442774025
+0x4007c0 <__libc_csu_init+48>:	-1442708488	-1824260460	-1744830686	-1275068044
+0x4007d0 <__libc_csu_init+64>:	-763363309	-721215457	-126649693	-1441266718
+0x4007e0 <__libc_csu_init+80>:	-1862269325	-1441332255	706085856	-700514208
+0x4007f0 <__libc_csu_init+96>:	-351075681	1426063137	-1455336461	-1455268875
+0x400800 <__libc_csu_init+112>:	-1455201289	-1463518211	-698416192	-721215457
+0x400810 <__libc_csu_fini>:	-698416192	-1447068675	-1862269955	-1463714819
+0x400820 <_fini+12>:	-698416192	0	131073	0
+(gdb) c
+Continuing.
+v[8] = 41
+
+Breakpoint 2, 0x0000000000400684 in printUnsortedArray ()
+1: x/i $pc
+=> 0x400684 <printUnsortedArray>:	ldr	w20, [x29, #16]
+(gdb) jump secondLoop
+Continuing at 0x4006d8.
+
+Sorted array:  
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[0] = 0
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[1] = 5
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[2] = 13
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[3] = 23
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[4] = 27
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[5] = 37
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[6] = 198
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) c
+Continuing.
+v[7] = 105
+
+Breakpoint 3, 0x0000000000400758 in printSortedArray ()
+1: x/i $pc
+=> 0x400758 <printSortedArray>:	ldr	w20, [x29, #16]
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 11536] will be killed.
+
+Quit anyway? (y or n) y
+]0;jaza.khan@csa3:~jaza.khan@csa3:~$ exit
+exit
+
+Script done on 2022-03-04 15:44:53-07:00
